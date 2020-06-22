@@ -16,6 +16,9 @@ if [ ! -d $WORKDIR ]; then
     exit 1
 fi
 
-prefetch --option-file SraAccList.txt -O $WORKDIR
-fasterq-dump --split-files $WORKDIR/*.sra -p
-echo 'Download and conversion to .fastq succesfull.'
+cd $WORKDIR/data/sra
+
+
+for i in *.fastq; do
+    perl /home/mees/NGS/FastQC/fastqc -f fastq -o $WORKDIR $i
+done
