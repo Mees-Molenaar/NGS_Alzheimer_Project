@@ -16,7 +16,7 @@ if [ ! -d $WORKDIR ]; then
     exit 1
 fi
 
-cd $WORKDIR/data/sra
+cd $WORKDIR
 
 
 for i in *.fastq; do

@@ -17,5 +17,5 @@ if [ ! -d $WORKDIR ]; then
 fi
 
 prefetch --option-file SraAccList.txt -O $WORKDIR
-fasterq-dump --split-files $WORKDIR/*.sra -p
+fasterq-dump --split-files $WORKDIR/*.sra -p -O $WORKDIR
 echo 'Download and conversion to .fastq succesfull.'
