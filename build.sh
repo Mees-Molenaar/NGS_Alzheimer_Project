@@ -1,8 +1,8 @@
 #! /bin/sh
 
 # Default
-GENOME="data/genome/genome.fa"
-OUTPUT="/data/genome/ref_genome/"
+GENOME="data/genomes/genome.fa"
+OUTPUT="/data/genomes/ref_genome/"
 
 while getopts "g:o:" opt; do
     case $opt in
