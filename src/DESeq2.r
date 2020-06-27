@@ -23,5 +23,13 @@ dds <- ddsHTSeq[keep,]
 
 dds <- DESeq(dds)
 res <- results(dds)
+res
+
+resultsNames(dds)
+
+# Shrinkage of effect size, since it is useful for visualization and ranking genes
+resLFC <- lfcShrink(dds, coef="condition_Old_vs_Aged_diseased", type="apeglm")
+resLFC
 
 write.csv(res, file = "/media/mees/Elements/ngs_data/DESeq/output.csv")
+write.csv(resLFC, file = "/media/mees/Elements/ngs_data/DESeq/output_LFC.csv")
