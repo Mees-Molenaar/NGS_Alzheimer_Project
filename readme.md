@@ -4,10 +4,10 @@ Pipeline for analyzing RNA-seq data.
 
 ## Table of Contents
 
-* [Introduction](##Introduction)
-* [Technologies](##Technologies)
-* [Setup](##Setup)
-* [Status](##Status)
+* [Introduction](#Introduction)
+* [Technologies](#Technologies)
+* [Setup](#Setup)
+* [Status](#Status)
 
 ## Introduction
 
