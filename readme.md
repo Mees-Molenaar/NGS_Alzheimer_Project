@@ -15,7 +15,7 @@ Pipeline for analyzing RNA-seq data.
 In this project I have used RNA-seq data from this GEO code: [GSE104704](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE104704).
 However, since I don't have a lot of memory, I have used 5 control \(RNA from old brain cells\) and 5 Alzheimer samples, which SRA accession numbers can be found in SraAccList.txt. If you are planning to use this Jupyter notebook for your research, you should change the SRA accession numbers to the ones you would like to use.
 
-The whole pipeline is accesible via [the Jupyter Notebook](https://github.com/Mees-Molenaar/NGS_Alzheimer_Project/blob/master/NGS_pipeline.ipynb).
+The whole pipeline is accesible via [the Jupyter Notebook](https://nbviewer.jupyter.org/github/Mees-Molenaar/NGS_Alzheimer_Project/blob/master/NGS_pipeline.ipynb).
 
 Additionally, for the alignment and feature count two reference genome files were needed. 
 
