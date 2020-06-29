@@ -30,7 +30,7 @@ In the pipeline, several tools were used, which I will describe in the technolog
 * [Hisat2](http://daehwankimlab.github.io/hisat2/), which is used to align the RNA-seq data to the reference genome. (version 2.2.0)
 * [Samtools](http://www.htslib.org/doc/samtools.html), which is used to convert .sam files to .bam files and then sort and index the alignment. (version 1.10)
 * [HTSeq](https://htseq.readthedocs.io/en/master/), which is used to count the features (in this case the genes) of the alignments. (version 0.12.4)
-* [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html), which is a R package and is used to analyze the differential expression of the samples.
+* [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html), which is a R package and is used to analyze the differential expression of the samples. (version 1.28.1)
 
 ## Setup
 
