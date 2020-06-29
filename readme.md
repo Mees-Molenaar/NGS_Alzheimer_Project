@@ -8,6 +8,7 @@ Pipeline for analyzing RNA-seq data.
 * [Technologies](#Technologies)
 * [Setup](#Setup)
 * [Status](#Status)
+* [Sources](#Sources)
 
 ## Introduction
 
@@ -39,3 +40,7 @@ In the pipeline, several tools were used, which I will describe in the technolog
 ## Status
 
 *In progress.*
+
+## Sources
+
+ [Wang Z and Ma'ayan A. An open RNA-Seq data analysis pipeline tutorial with an example of reprocessing data from a recent Zika virus study [version 1; peer review: 3 approved]. F1000Research 2016, 5:1574](https://doi.org/10.12688/f1000research.9110.1) 
