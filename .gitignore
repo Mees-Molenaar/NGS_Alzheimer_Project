@@ -1,1 +1,4 @@
-data/
+seqtk/
+hisat2-2.2.0/
+temp/
+Trimmomatic-0.39/
