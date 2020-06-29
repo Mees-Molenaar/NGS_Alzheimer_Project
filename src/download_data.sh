@@ -37,4 +37,6 @@ do
     else
         echo "Error while converting ${i}."
     fi
+
+    mv $i $SRA/$i
 done
