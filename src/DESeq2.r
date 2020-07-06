@@ -31,5 +31,33 @@ resultsNames(dds)
 resLFC <- lfcShrink(dds, coef="condition_Old_vs_Aged_diseased", type="apeglm")
 resLFC
 
+# Make MA plots
+plotMA(res, ylim=c(-3,3) , main="Normal data")
+plotMA(resLFC, ylim=c(-3,3), main="Shrunken log2 fold changes")
+
+# Transform the data for clustering
+vsd <- vst(dds, blind=FALSE)
+
+# Heatmap of the count matrix
+library("pheatmap")
+select <- order(rowMeans(counts(dds, normalized=TRUE)), decreasing=TRUE)[1:20]
+df <- as.data.frame(colData(dds)[c("condition")])
+pheatmap(assay(vsd)[select,], annonation_col=df)
+
+#Heatmap of the sample-to-sample distance
+sampleDists <- dist(t(assay(vsd)))
+library("RColorBrewer")
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- paste(vsd$condtion)
+colnames(sampleDistMatrix) <- NULL
+colors <- colorRampPalette(rev(brewer.pal(9, "Blues")))(255)
+pheatmap(sampleDistMatrix, clustering_distance_rows=sampleDists, clustering_distance_cols=sampleDists, col=colors)
+
+# Principal Component plot of the samples
+plotPCA(vsd, intgroup=c("condition"))
+
+# Dispersion plot
+plotDispEsts(dds)
+
 write.csv(res, file = "/media/mees/Elements/ngs_data/DESeq/output.csv")
 write.csv(resLFC, file = "/media/mees/Elements/ngs_data/DESeq/output_LFC.csv")
