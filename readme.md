@@ -35,11 +35,17 @@ In the pipeline, several tools were used, which I will describe in the technolog
 
 ## Setup
 
-*In progress.*
+Install the different tools that are listed in [Technologies](#Technologies). Then, in the Jupyter Notebook, change the global variables to your directories and commands. Lastly, run the cells.
 
 ## Status
 
-*In progress.*
+Everything works, if you have troubles running it or if you have feedback, please let me know by writing an issue.
+
+Additionally, I will still improve the current system. And I have some things I want to improve / add:
+
+* Adapter trimming using cutadapt
+* Analysis using Python instead of R
+* Making a Docker container
 
 ## Sources
 
