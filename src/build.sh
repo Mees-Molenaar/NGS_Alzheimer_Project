@@ -2,13 +2,16 @@
 
 # Default
 GENOME="data/genomes/genome.fa"
-OUTPUT="/data/genomes/ref_genome/"
+OUTPUT="data/genomes/ref_genome/"
+HISAT_BUILD="hisat2/hisat2-build"
 
-while getopts "g:o:" opt; do
+while getopts "g:o:l:" opt; do
     case $opt in
         g) GENOME=$OPTARG  
         ;;
         o) OUTPUT=$OPTARG
+        ;;
+        l) HISAT_BUILD=$OPTARG
         ;;
         *) echo 'error' >&2
             exit 1
@@ -23,4 +26,9 @@ fi
 # If output directory doesn't exist, make it
 mkdir -p $OUTPUT
 
-/home/mees/NGS_Alzheimer/hisat2-2.2.0/hisat2-build -p 4 $GENOME $OUTPUT/ref_genome
+
+if $HISAT_BUILD -p 4 $GENOME $OUTPUT/ref_genome ; then
+    echo "Succesfully build the reference genome."
+else
+    echo "Error while building reference genome."
+fi

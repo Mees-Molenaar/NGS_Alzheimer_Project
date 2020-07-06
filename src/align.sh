@@ -32,12 +32,10 @@ for dir in /$WORKDIR/*/; do
     if [[ $dir =~ "SRR" ]]; then
         mkdir -p $WORKDIR/$dir/Hisat2
 
-        if $HISAT -p 4 -x $GENOME/ref_genome -U $WORKDIR/$dir/$dir.sra.fastq -S $WORKDIR/$dir/Hisat2/$dir.sam | tee $WORKDIR/$dir/Hisat2/${dir}_out.txt; then
+        if $HISAT -p 4 -x $GENOME/ref_genome -U $WORKDIR/$dir/$dir.sra.fastq -S $WORKDIR/$dir/Hisat2/$dir.sam --summary-file $WORKDIR/$dir/Hisat2/${dir}_out.txt; then
             echo "Hisat2 succesfully aligned ${dir} to the reference genome."
         else
-            cat
             echo "Error while aligning ${dir} to the reference genome"
         fi
     fi
-    break
 done
