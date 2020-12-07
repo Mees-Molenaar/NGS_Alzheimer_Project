@@ -1,4 +1,4 @@
-# Next-Generation Sequencing RNA-seq
+# Next-Generation Sequencing RNA-seq (Currently this project is pauzed)
 
 Pipeline for analyzing RNA-seq data.
 
